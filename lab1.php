@@ -11,5 +11,5 @@
     echo("lab1");
     ?>
 
-<!-- </body>
-</html> -->
+</body>
+</html>

@@ -1,3 +1,4 @@
-<?php
-</body>
-</html>
+  <?php
+    echo("lab1");
+    
+    ?>
