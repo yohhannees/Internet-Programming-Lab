@@ -10,12 +10,15 @@
    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
    Name:<br>
   <input type="text" name="name"><br>
+  <span class="error">* <?php echo $nameErr; ?></span>
    F Name:<br>
   <input type="text" name="fname"><br>
    Middle Name:<br>
   <input type="text" name="mname"><br>
+    <span class="error">* <?php echo $mnameErr; ?></span>
   Email:<br>
   <input type="text" name="email"><br>
+    <span class="error">* <?php echo $emailErr; ?></span>
    website:<br>
   <input type="text" name="website"><br>
     comment:<br>
