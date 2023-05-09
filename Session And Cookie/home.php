@@ -20,4 +20,5 @@ $username = $_SESSION['username'];
 <body>
     <h1>Welcome, <?php echo $username; ?>!</h1>
     <p>You are now logged in.</p>
+    <a href="logout.php">Logout</a>
 </body>
