@@ -1,18 +1,13 @@
 <?php
-require_once 'db.php';
+require_once 'DB_con.php';
 
 if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['age'])) {
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $age = $_POST['age'];
 
-    $sql = "INSERT INTO users (first_name, last_name, age) VALUES (?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssi", $first_name, $last_name, $age);
-    $stmt->execute();
-
-    $stmt->close();
-    $conn->close();
+    $db = new DB_con();
+    $db->insert($first_name, $last_name, $age);
 }
 
 header("location: index.php");

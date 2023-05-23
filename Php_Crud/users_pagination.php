@@ -1,14 +1,20 @@
 <link rel="stylesheet" href="./users_pagination.css">
 
-<?php
 
-$limit = isset($_GET['limit']) ? $_GET['limit'] : 3; // Use the selected value or default to 3 records per page
+<?php
+require_once 'DB_con.php';
+
+$limit = isset($_GET['limit']) ? $_GET['limit'] : 3;
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $limit;
-$result = $conn->query("SELECT COUNT(*) FROM names");
-$total_records = $result->fetch_array()[0];
+
+$db = new DB_con();
+$result = $db->fetchdata();
+
+$total_records = $result->num_rows;
 $total_pages = ceil($total_records / $limit);
-$result = $conn->query("SELECT * FROM names LIMIT $start, $limit");
+
+$result = $db->fetchdata($start, $limit);
 
 
 echo '<table class="table table-bordered mt-4">';

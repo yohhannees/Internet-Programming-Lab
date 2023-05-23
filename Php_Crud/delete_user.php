@@ -1,11 +1,15 @@
+
+
+
+
+
 <?php
-require_once 'db.php';
+require_once 'DB_con.php';
 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM names WHERE id=?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $id);
-$stmt->execute();
+$db = new DB_con();
+$db->delete($id);
 
 header("location: index.php");
+?>

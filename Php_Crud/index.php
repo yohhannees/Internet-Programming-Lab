@@ -49,7 +49,7 @@
 
         <!-- Display Users and Pagination -->
         <?php
-        require 'db.php';
+        require 'DB_con.php';
         require 'users_pagination.php';
         ?>
 

@@ -1,19 +1,16 @@
 <?php
-require_once 'db.php';
+require_once 'DB_con.php';
 
 $id = $_GET['id'];
-$result = $conn->query("SELECT * FROM names WHERE id=$id");
-$row = $result->fetch_assoc();
+$db = new DB_con();
+$row = $db->fetchonerecord($id);
 
 if (isset($_POST['update'])) {
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $age = $_POST['age'];
 
-    $sql = "UPDATE users SET first_name=?, last_name=?, age=? WHERE id=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssii", $first_name, $last_name, $age, $id);
-    $stmt->execute();
+    $db->update($first_name, $last_name, $age, $id);
 
     header("location: index.php");
 }
