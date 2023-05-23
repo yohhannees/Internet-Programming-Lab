@@ -4,7 +4,7 @@
 <?php
 require_once 'DB_con.php';
 
-$limit = isset($_GET['limit']) ? $_GET['limit'] : 3;
+$limit = isset($_GET['limit']) ? $_GET['limit'] : 10;
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $limit;
 
