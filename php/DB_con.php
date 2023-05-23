@@ -4,7 +4,7 @@ class DB_con {
     private $host = "localhost";
     private $user = "root";
     private $password = "";
-    private $database = "mydatabaselab";
+    private $database = "newphp";
     private $conn;
 
     // constructor function to create database connection
