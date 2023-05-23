@@ -10,7 +10,7 @@
 
 <body>
     <div>
-        <h1 class="text-center">CRUD Application with Pagination</h1>
+        <h1 class="text-center">CRUD Application</h1>
 
         <!-- Add User Form -->
         <div class="form-container">
@@ -32,7 +32,7 @@
                 </form>
             </div>
             <div class="update">
-                <form method="get">
+                <!-- <form method="get">
                     <label for="limit">Records per page:</label>
                     <select name="limit" id="limit">
                         <option value="3">3</option>
@@ -42,7 +42,7 @@
                     </select>
                     <input type="hidden" name="page" value="1">
                     <button type="submit">Update</button>
-                </form>
+                </form> -->
             </div>
         </div>
 

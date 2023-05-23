@@ -4,7 +4,7 @@
 <?php
 require_once 'DB_con.php';
 
-$limit = isset($_GET['limit']) ? $_GET['limit'] : 10;
+$limit = isset($_GET['limit']) ? $_GET['limit'] : 3;
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $limit;
 
@@ -44,11 +44,11 @@ while ($row = $result->fetch_assoc()) {
 
 echo '</tbody>';
 echo '</table>';
-echo '<nav aria-label="Page navigation example">';
-echo '<ul class="pagination justify-content-center">';
-for ($i = 1; $i <= $total_pages; $i++) {
-    echo '<a class="page-link " href="index.php?page=' . $i . '&limit=' . $limit . '">' . $i . '</a>';
-}
-echo '</ul>';
-echo '</nav>';
+// echo '<nav aria-label="Page navigation example">';
+// echo '<ul class="pagination justify-content-center">';
+// for ($i = 1; $i <= $total_pages; $i++) {
+//     echo '<a class="page-link " href="index.php?page=' . $i . '&limit=' . $limit . '">' . $i . '</a>';
+// }
+// echo '</ul>';
+// echo '</nav>';
 ?>

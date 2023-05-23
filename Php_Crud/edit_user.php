@@ -44,7 +44,7 @@ if (isset($_POST['update'])) {
                 <input type="number" class="form-control" id="age" name="age" value="<?php echo $row['age']; ?>" required>
             </div>
             <button type="submit" name="update">Update</button>
-            <button class="cancel"><a href="index.php">Cancel</a></button>
+            <button class="cancel"><a class="linkk" href="index.php">Cancel</a></button>
         </form>
     </div>
 </body>
